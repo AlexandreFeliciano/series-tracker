@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const Series = require("../models/Series");
+const Series = require("../models/series");
 
 // GET todas as séries
 router.get("/", async (req, res) => {
@@ -42,7 +42,7 @@ router.post("/", async (req, res) => {
     console.error("ERRO NO POST /api/series:", error);
     res.status(400).json({
       message: "Erro ao criar série",
-      error: error.message
+      error: error.message,
     });
   }
 });
