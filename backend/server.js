@@ -16,13 +16,15 @@ app.get("/", (req, res) => {
 
 app.use("/api/series", seriesRoutes);
 
+const PORT = process.env.PORT || 5000;
+
 mongoose
   .connect(process.env.MONGODB_URI)
   .then(() => {
     console.log("MongoDB ligado com sucesso");
 
-    app.listen(process.env.PORT, () => {
-      console.log(`Servidor a correr em http://localhost:${process.env.PORT}`);
+    app.listen(PORT, () => {
+      console.log(`Servidor a correr na porta ${PORT}`);
     });
   })
   .catch((error) => {
