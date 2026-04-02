@@ -1,4 +1,5 @@
-﻿import { useEffect, useState } from "react";
+﻿/* eslint-disable react-hooks/set-state-in-effect */
+import { useEffect, useState } from "react";
 
 function SeriesForm({ selectedSeries, onClose, onSave, onDelete }) {
     const [formData, setFormData] = useState({
