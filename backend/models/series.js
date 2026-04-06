@@ -44,7 +44,14 @@ const seriesSchema = new mongoose.Schema(
         cover: {
             type: String,
             default: "https://placehold.co/300x450/png?text=Series"
-        }
+        },
+        episodes: [
+          {
+            title: { type: String, required: true },
+            duration: { type: Number, default: 0 },
+            watched: { type: Boolean, default: false }
+          }
+        ]
     },
     {
         timestamps: true

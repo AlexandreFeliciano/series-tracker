@@ -4,6 +4,7 @@ const cors = require("cors");
 require("dotenv").config();
 
 const seriesRoutes = require("./routes/seriesRoutes");
+const seriesAdvancedRoutes = require("./routes/seriesAdvanced");
 
 const app = express();
 
@@ -15,6 +16,7 @@ app.get("/", (req, res) => {
 });
 
 app.use("/api/series", seriesRoutes);
+app.use("/api/series", seriesAdvancedRoutes);
 
 const PORT = process.env.PORT || 5000;
 
