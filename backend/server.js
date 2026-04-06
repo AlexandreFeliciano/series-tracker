@@ -16,7 +16,7 @@ app.get("/", (req, res) => {
 });
 
 app.use("/api/series", seriesRoutes);
-app.use("/api/series", seriesAdvancedRoutes);
+app.use("/api/advanced", seriesAdvancedRoutes);
 
 const PORT = process.env.PORT || 5000;
 
